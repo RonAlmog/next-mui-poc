@@ -9,11 +9,17 @@ import {
   CssBaseline,
   Divider,
   PaletteMode,
+  Stack,
   ThemeProvider,
   Typography,
   useTheme,
 } from "@mui/material";
 import { getStoredTheme, getThemeOptions, setStoredTheme } from "../src/theme";
+import Sidebar from "../components/layout/Sidebar";
+
+import Rightbar from "../components/layout/Rightbar";
+import Feed from "../components/layout/Feed";
+import Navbar from "../components/layout/Navbar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [mode, setMode] = useState<PaletteMode>("dark"); // default is dark mode
@@ -31,7 +37,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-
+      <Navbar />
+      <Stack direction="row" spacing={2} justifyContent="space-between">
+        <Sidebar />
+        <Feed />
+        <Rightbar />
+      </Stack>
       <Component {...pageProps} />
     </ThemeProvider>
   );
