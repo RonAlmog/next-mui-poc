@@ -2,16 +2,16 @@ import { PaletteMode } from "@mui/material";
 import { ThemeOptions } from "@mui/material/styles";
 
 const primaryPalette = {
-  main: "#09D3AD",
-  light: "#3ADBBD",
-  dark: "#069379",
+  main: "#1976d2",
+  light: "#1976d2",
+  dark: "#90caf9",
   contrastText: "#FFFFFF",
 };
 
 const secondaryPalette = {
-  main: "#F50057",
+  main: "#90caf9",
   light: "#F73378",
-  dark: "#AB003C",
+  dark: "#f48fb1",
   contrastText: "#FFFFFF",
 };
 
@@ -47,7 +47,7 @@ const lightThemeOptions: ThemeOptions = {
   palette: {
     background: {
       default: "#FFFFFF",
-      paper: "#EBEDF0",
+      paper: "#ffffff",
     },
     text: {
       primary: "#1C1E21",
@@ -66,8 +66,8 @@ const lightThemeOptions: ThemeOptions = {
 const darkThemeOptions: ThemeOptions = {
   palette: {
     background: {
-      default: "#18191A",
-      paper: "#299886",
+      default: "#212121",
+      paper: "#424242",
     },
     text: {
       primary: "#F5F6F7",
