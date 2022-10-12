@@ -20,6 +20,7 @@ import Sidebar from "../components/layout/Sidebar";
 import Rightbar from "../components/layout/Rightbar";
 import Feed from "../components/layout/Feed";
 import Navbar from "../components/layout/Navbar";
+import Add from "../components/layout/Add";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [mode, setMode] = useState<PaletteMode>("dark"); // default is dark mode
@@ -43,6 +44,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Feed />
         <Rightbar />
       </Stack>
+      <Add />
       <Component {...pageProps} />
     </ThemeProvider>
   );
