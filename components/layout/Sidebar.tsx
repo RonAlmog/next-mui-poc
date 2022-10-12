@@ -19,7 +19,7 @@ import React from "react";
 
 type Props = {};
 
-const Sidebar = (props: Props) => {
+const Sidebar = ({ mode, setMode }) => {
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
       <Box position="fixed">
@@ -61,7 +61,9 @@ const Sidebar = (props: Props) => {
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-              <Switch></Switch>
+              <Switch
+                onChange={(e) => setMode(mode === "light" ? "dark" : "light")}
+              ></Switch>
             </ListItemButton>
           </ListItem>
         </List>
